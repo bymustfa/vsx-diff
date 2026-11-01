@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Turkish README, community files, and CI on Node.js 20 and 22.
+- npm publish metadata, release-please, Dependabot, CodeQL, Scorecard, and a demo GIF.
 
 ## 0.1.0 — 2026-11-01
 

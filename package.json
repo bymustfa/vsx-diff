@@ -35,7 +35,8 @@
     "lint": "eslint .",
     "demo": "npm run build && node demo/run-demo.mjs",
     "generate:fixtures": "npm run build && node demo/generate-fixtures.mjs",
-    "vsx-diff": "node bin/vsx-diff.js"
+    "vsx-diff": "node bin/vsx-diff.js",
+    "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
     "vscode",
@@ -44,8 +45,12 @@
     "supply-chain",
     "security",
     "cursor",
-    "vscodium"
+    "vscodium",
+    "cli"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "commander": "^14.0.2",
     "fflate": "^0.8.2",

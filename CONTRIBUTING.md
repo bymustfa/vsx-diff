@@ -46,4 +46,20 @@ Prefer a rule you can explain in one sentence in the report. A new signal should
 
 ## Commit messages
 
+Use [Conventional Commits](https://www.conventionalcommits.org/) so release-please can version the package: `feat:`, `fix:`, and `chore:`. A `feat!` or `BREAKING CHANGE:` footer is a breaking change.
+
 Describe the change. Follow `AGENTS.md`: no AI-tool signature, no `Co-Authored-By` trailer, and no "generated with ..." note in commit messages or pull request descriptions.
+
+## Maintainers
+
+Releases are cut by [release-please](https://github.com/googleapis/release-please). On every push to `main`, `.github/workflows/release-please.yml` opens or updates a release pull request and, when that PR is merged, tags the commit and publishes a GitHub Release. The same workflow then publishes the package.
+
+npm publish needs a repository secret named `NPM_TOKEN`:
+
+1. On npm, create a granular access token that can publish `vsx-diff` (automation token is fine).
+2. In the GitHub repo, add it as an Actions secret named `NPM_TOKEN` (Settings → Secrets and variables → Actions).
+3. Leave the workflow's `id-token: write` permission in place. The publish job runs `npm publish --provenance --access public` and maps `NPM_TOKEN` to `NODE_AUTH_TOKEN`. Provenance only succeeds for a public repository.
+
+Do not commit the token. `npm publish` also runs `prepublishOnly`, which builds and tests before the tarball is packed. The last released version tracked by release-please is in `.release-please-manifest.json` (currently `0.1.0`).
+
+Dependabot opens weekly update PRs for npm and GitHub Actions. CodeQL and OpenSSF Scorecard run from `.github/workflows/`.

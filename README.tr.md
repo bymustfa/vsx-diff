@@ -1,6 +1,9 @@
 [English](README.md) | Türkçe
 
 [![CI](https://github.com/bymustfa/vsx-diff/actions/workflows/ci.yml/badge.svg)](https://github.com/bymustfa/vsx-diff/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/bymustfa/vsx-diff/badge)](https://scorecard.dev/viewer/?uri=github.com/bymustfa/vsx-diff)
+
+![vsx-diff demo](demo/demo.gif)
 
 # vsx-diff
 
