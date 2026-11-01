@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+agent-tools/
+demo/.cache/
+*.tsbuildinfo

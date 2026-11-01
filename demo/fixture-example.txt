@@ -1,0 +1,59 @@
+vsx-diff  evilpub.hello
+1.0.0 (file)  →  1.1.0 (file)
+demo/fixtures/goodpub.hello-1.0.0.vsix  →  demo/fixtures/evilpub.hello-1.1.0.vsix
+
+Risk  HIGH  score 583
+  +100  high    Publisher changed from goodpub to evilpub. A publisher change means a different account now ships this extension.
+  + 80  high    activationEvents added "*", so the extension activates on every event.
+  + 70  high    npm lifecycle script added: postinstall (node payload.js). Install scripts run when the package is installed.
+  + 60  high    native.node: New native binary (.node). Native code runs outside the JavaScript sandbox.
+  + 55  high    extension.js: New eval( call. The extension can execute a string as code.
+  + 55  high    extension.js: New Function constructor. The extension can compile a string into code.
+  + 35  medium  payload.bin: Shannon entropy 7.80 bits/byte on 1024 sampled bytes (threshold 7.5). Random-looking content is unusual outside images, fonts, archives, and wasm.
+  + 30  medium  untrustedWorkspaces.supported is now true, so the extension may run in untrusted workspaces.
+  + 30  medium  extension.js: New child_process reference. The extension can spawn local processes.
+  + 25  medium  extension.js: New raw IP: 203.0.113.10. Hard-coded addresses are a common callback pattern.
+  + 20  medium  extensionDependencies added evilpub.helper. Installing this update pulls in more extensions.
+  + 10  low     dependencies added: evil-lib@9.9.9
+  +  8  low     extension.js: New URL: http://203.0.113.10/stage.
+  +  5  low     contributes changed: commands 1 → 2; commands added evilpub.collect.
+
+Notes
+  · Extension id changed from goodpub.hello to evilpub.hello.
+
+Manifest
+  publisher                goodpub → evilpub
+  version                  1.0.0 → 1.1.0
+  activationEvents         added *; removed onCommand:goodpub.hello
+  extensionDependencies    [] → ["evilpub.helper"]  (added evilpub.helper)
+  capabilities             untrustedWorkspaces.supported false → true
+  contributes              commands 1 → 2; commands added evilpub.collect
+
+Lifecycle scripts
+  +  postinstall  node payload.js
+
+Dependencies
+  +  dependencies  evil-lib@9.9.9
+
+Files  +2  ~3  -0  0 unchanged
+  +  native.node  64 B
+  +  payload.bin  1.0 KB
+  ~  extension.js  135 B → 337 B (+202 B)
+  ~  package.json  516 B → 693 B (+177 B)
+  ~  README.md  30 B → 34 B (+4 B)
+
+Suspicious
+  high    native.node
+         New native binary (.node). Native code runs outside the JavaScript sandbox.
+  high    extension.js
+         New eval( call. The extension can execute a string as code.
+  high    extension.js
+         New Function constructor. The extension can compile a string into code.
+  medium  payload.bin
+         Shannon entropy 7.80 bits/byte on 1024 sampled bytes (threshold 7.5). Random-looking content is unusual outside images, fonts, archives, and wasm.
+  medium  extension.js
+         New child_process reference. The extension can spawn local processes.
+  medium  extension.js
+         New raw IP: 203.0.113.10. Hard-coded addresses are a common callback pattern.
+  low     extension.js
+         New URL: http://203.0.113.10/stage.

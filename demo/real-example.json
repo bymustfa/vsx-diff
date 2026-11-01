@@ -1,0 +1,1701 @@
+{
+  "schemaVersion": 1,
+  "extensionId": "EditorConfig.EditorConfig",
+  "from": {
+    "version": "0.16.6",
+    "source": "openvsx",
+    "path": "demo/.cache/EditorConfig.EditorConfig/0.16.6-openvsx.vsix",
+    "publishedAt": "2021-08-23T03:21:59.146068Z"
+  },
+  "to": {
+    "version": "0.18.2",
+    "source": "openvsx",
+    "path": "demo/.cache/EditorConfig.EditorConfig/0.18.2-openvsx.vsix",
+    "publishedAt": "2026-04-09T04:09:42.629870Z"
+  },
+  "risk": {
+    "level": "medium",
+    "score": 59,
+    "reasons": [
+      "untrustedWorkspaces.supported is now true, so the extension may run in untrusted workspaces.",
+      "contributes changed: contribution contents changed.",
+      "devDependencies added: @vscode/test-electron@^2.5.2",
+      "devDependencies added: @vscode/vsce@^3.5.0",
+      "dependencies bumped: editorconfig@^3.0.2",
+      "devDependencies removed: @types/glob",
+      "devDependencies bumped: @types/mocha@^10.0.10",
+      "devDependencies bumped: @types/node@^20.19.0",
+      "devDependencies bumped: @types/vscode@~1.100.0",
+      "devDependencies bumped: @typescript-eslint/eslint-plugin@^8.34.0",
+      "devDependencies bumped: @typescript-eslint/parser@^8.34.0",
+      "devDependencies bumped: eslint@^8.57.1",
+      "devDependencies bumped: eslint-config-prettier@^10.1.5",
+      "devDependencies bumped: eslint-config-xo@^0.45.0",
+      "devDependencies bumped: eslint-plugin-prettier@^5.4.1",
+      "devDependencies bumped: glob@^11.0.2",
+      "devDependencies removed: husky",
+      "devDependencies removed: lint-staged",
+      "devDependencies bumped: mocha@^11.6.0"
+    ],
+    "factors": [
+      {
+        "points": 30,
+        "severity": "medium",
+        "reason": "untrustedWorkspaces.supported is now true, so the extension may run in untrusted workspaces."
+      },
+      {
+        "points": 5,
+        "severity": "low",
+        "reason": "contributes changed: contribution contents changed."
+      },
+      {
+        "points": 4,
+        "severity": "low",
+        "reason": "devDependencies added: @vscode/test-electron@^2.5.2"
+      },
+      {
+        "points": 4,
+        "severity": "low",
+        "reason": "devDependencies added: @vscode/vsce@^3.5.0"
+      },
+      {
+        "points": 2,
+        "severity": "low",
+        "reason": "dependencies bumped: editorconfig@^3.0.2"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies removed: @types/glob"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: @types/mocha@^10.0.10"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: @types/node@^20.19.0"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: @types/vscode@~1.100.0"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: @typescript-eslint/eslint-plugin@^8.34.0"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: @typescript-eslint/parser@^8.34.0"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: eslint@^8.57.1"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: eslint-config-prettier@^10.1.5"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: eslint-config-xo@^0.45.0"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: eslint-plugin-prettier@^5.4.1"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: glob@^11.0.2"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies removed: husky"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies removed: lint-staged"
+      },
+      {
+        "points": 1,
+        "severity": "low",
+        "reason": "devDependencies bumped: mocha@^11.6.0"
+      }
+    ]
+  },
+  "manifest": [
+    {
+      "field": "version",
+      "from": "0.16.6",
+      "to": "0.18.2",
+      "note": null
+    },
+    {
+      "field": "displayName",
+      "from": "EditorConfig for VS Code",
+      "to": "EditorConfig",
+      "note": null
+    },
+    {
+      "field": "engines.vscode",
+      "from": "^1.51.1",
+      "to": "^1.100.0",
+      "note": null
+    },
+    {
+      "field": "capabilities",
+      "from": {
+        "virtualWorkspaces": {
+          "supported": false,
+          "description": "The `editorconfig` dependency requires fs access for parsing the config to use."
+        }
+      },
+      "to": {
+        "virtualWorkspaces": {
+          "supported": false,
+          "description": "The `editorconfig` dependency requires fs access for parsing the config to use."
+        },
+        "untrustedWorkspaces": {
+          "supported": true
+        }
+      },
+      "note": "untrustedWorkspaces.supported unset → true"
+    },
+    {
+      "field": "contributes",
+      "from": {
+        "commands": 1,
+        "configuration": 2,
+        "menus": 2,
+        "languages": 1,
+        "grammars": 1
+      },
+      "to": {
+        "commands": 1,
+        "configuration": 2,
+        "menus": 2,
+        "languages": 1,
+        "grammars": 1
+      },
+      "note": "contribution contents changed"
+    }
+  ],
+  "scripts": [
+    {
+      "name": "prewatch",
+      "kind": "removed",
+      "from": "npm run build",
+      "to": null
+    }
+  ],
+  "dependencies": [
+    {
+      "section": "dependencies",
+      "name": "editorconfig",
+      "kind": "bumped",
+      "from": "^0.15",
+      "to": "^3.0.2"
+    },
+    {
+      "section": "devDependencies",
+      "name": "@types/glob",
+      "kind": "removed",
+      "from": "^7",
+      "to": null
+    },
+    {
+      "section": "devDependencies",
+      "name": "@types/mocha",
+      "kind": "bumped",
+      "from": "^8",
+      "to": "^10.0.10"
+    },
+    {
+      "section": "devDependencies",
+      "name": "@types/node",
+      "kind": "bumped",
+      "from": "^14",
+      "to": "^20.19.0"
+    },
+    {
+      "section": "devDependencies",
+      "name": "@types/vscode",
+      "kind": "bumped",
+      "from": "^1",
+      "to": "~1.100.0"
+    },
+    {
+      "section": "devDependencies",
+      "name": "@typescript-eslint/eslint-plugin",
+      "kind": "bumped",
+      "from": "^4",
+      "to": "^8.34.0"
+    },
+    {
+      "section": "devDependencies",
+      "name": "@typescript-eslint/parser",
+      "kind": "bumped",
+      "from": "^4",
+      "to": "^8.34.0"
+    },
+    {
+      "section": "devDependencies",
+      "name": "@vscode/test-electron",
+      "kind": "added",
+      "from": null,
+      "to": "^2.5.2"
+    },
+    {
+      "section": "devDependencies",
+      "name": "@vscode/vsce",
+      "kind": "added",
+      "from": null,
+      "to": "^3.5.0"
+    },
+    {
+      "section": "devDependencies",
+      "name": "eslint",
+      "kind": "bumped",
+      "from": "^7",
+      "to": "^8.57.1"
+    },
+    {
+      "section": "devDependencies",
+      "name": "eslint-config-prettier",
+      "kind": "bumped",
+      "from": "^6",
+      "to": "^10.1.5"
+    },
+    {
+      "section": "devDependencies",
+      "name": "eslint-config-xo",
+      "kind": "bumped",
+      "from": "^0.33",
+      "to": "^0.45.0"
+    },
+    {
+      "section": "devDependencies",
+      "name": "eslint-plugin-prettier",
+      "kind": "bumped",
+      "from": "^3",
+      "to": "^5.4.1"
+    },
+    {
+      "section": "devDependencies",
+      "name": "glob",
+      "kind": "bumped",
+      "from": "^7",
+      "to": "^11.0.2"
+    },
+    {
+      "section": "devDependencies",
+      "name": "husky",
+      "kind": "removed",
+      "from": "^4",
+      "to": null
+    },
+    {
+      "section": "devDependencies",
+      "name": "lint-staged",
+      "kind": "removed",
+      "from": "^10",
+      "to": null
+    },
+    {
+      "section": "devDependencies",
+      "name": "mocha",
+      "kind": "bumped",
+      "from": "^8",
+      "to": "^11.6.0"
+    },
+    {
+      "section": "devDependencies",
+      "name": "prettier",
+      "kind": "bumped",
+      "from": "^2",
+      "to": "^3.5.3"
+    },
+    {
+      "section": "devDependencies",
+      "name": "rimraf",
+      "kind": "bumped",
+      "from": "^3",
+      "to": "^6.0.1"
+    },
+    {
+      "section": "devDependencies",
+      "name": "typescript",
+      "kind": "bumped",
+      "from": "^4",
+      "to": "~5.8.3"
+    },
+    {
+      "section": "devDependencies",
+      "name": "vscode-test",
+      "kind": "removed",
+      "from": "^1",
+      "to": null
+    },
+    {
+      "section": "devDependencies",
+      "name": "vscode-test-utils",
+      "kind": "bumped",
+      "from": "^1",
+      "to": "^1.0.0"
+    }
+  ],
+  "files": {
+    "added": 98,
+    "removed": 30,
+    "modified": 20,
+    "unchanged": 11,
+    "changes": [
+      {
+        "path": "DEVELOPER.md",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 728,
+        "delta": 728,
+        "sha256Before": null,
+        "sha256After": "ca8955e0be9feb1cbe824035b6b7bda73350dc2294370015421d172664cd6b50"
+      },
+      {
+        "path": "node_modules/@one-ini/wasm/LICENSE",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1064,
+        "delta": 1064,
+        "sha256Before": null,
+        "sha256After": "8bff7c96e66561af0ccdbe3033c748684713aaff2daba7149f2feda334fee6de"
+      },
+      {
+        "path": "node_modules/@one-ini/wasm/one_ini_bg.wasm",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 89224,
+        "delta": 89224,
+        "sha256Before": null,
+        "sha256After": "154532f2ed51973a0d75a97fa0b19240c9dfa837375a2cf82d57574060c0cb3a"
+      },
+      {
+        "path": "node_modules/@one-ini/wasm/one_ini.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 9315,
+        "delta": 9315,
+        "sha256Before": null,
+        "sha256After": "f32345693ced0b7129147ef9f971d8e1a903cdede7dfa53ff33f3e7a02df9e8f"
+      },
+      {
+        "path": "node_modules/@one-ini/wasm/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 600,
+        "delta": 600,
+        "sha256Before": null,
+        "sha256After": "7ee34bf6d9ba728d2f2fa12aa3475f7628539fd20f8504d2f5255bddb40bca1d"
+      },
+      {
+        "path": "node_modules/@one-ini/wasm/README.md",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 2018,
+        "delta": 2018,
+        "sha256Before": null,
+        "sha256After": "6dba10007e292de76c8f49b1063d379cfc5819e8920f20cbf37332f78939a2db"
+      },
+      {
+        "path": "node_modules/commander/esm.mjs",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 310,
+        "delta": 310,
+        "sha256Before": null,
+        "sha256After": "19331de9ae2588143e74effe5a3072b67faf6c4ed4a00725399c6de477a86971"
+      },
+      {
+        "path": "node_modules/commander/lib/argument.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 3208,
+        "delta": 3208,
+        "sha256Before": null,
+        "sha256After": "bc36a8a2438a051556ee150ab5af0b4f6a017af243a43cc44a26bb42abea9bae"
+      },
+      {
+        "path": "node_modules/commander/lib/command.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 87209,
+        "delta": 87209,
+        "sha256Before": null,
+        "sha256After": "c161e3d99c26a125ec591a32f64f65975a7d7aac56dc29a5ff644d39d61c8831"
+      },
+      {
+        "path": "node_modules/commander/lib/error.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1170,
+        "delta": 1170,
+        "sha256Before": null,
+        "sha256After": "013d254f21524dc912aa61a53394d5ebb97e722be1c683f7bd2313c14597d521"
+      },
+      {
+        "path": "node_modules/commander/lib/help.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 21130,
+        "delta": 21130,
+        "sha256Before": null,
+        "sha256After": "7d5757c053964023d45d82a4d4de01dadf32a2055f15d8ab58166914f035b9ea"
+      },
+      {
+        "path": "node_modules/commander/lib/option.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 10289,
+        "delta": 10289,
+        "sha256Before": null,
+        "sha256After": "b5cf136f3db9dd92654d3d3dfd82929079c3aef62584d7f11c9782e8576cec97"
+      },
+      {
+        "path": "node_modules/commander/lib/suggestSimilar.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 2774,
+        "delta": 2774,
+        "sha256Before": null,
+        "sha256After": "6a3a368ace1abd1cc6b551ae10bcbae18eda3fed0fb0cfd60c7960c6663dad58"
+      },
+      {
+        "path": "node_modules/commander/package-support.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 337,
+        "delta": 337,
+        "sha256Before": null,
+        "sha256After": "fdce1022e389b2774b706b3f4851c7938a52d099ee39153fc1d965ab7b5b7f81"
+      },
+      {
+        "path": "node_modules/commander/typings/esm.d.mts",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 168,
+        "delta": 168,
+        "sha256Before": null,
+        "sha256After": "b124c0624b15412ace7d54644ade38d7a69db7e25488a1a4d2a8df6e11696538"
+      },
+      {
+        "path": "node_modules/editorconfig/lib/cli.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 4664,
+        "delta": 4664,
+        "sha256Before": null,
+        "sha256After": "6cc59c6fd622299d649d224f01963e0b5dd8b77734324f47f5d379ba626d2635"
+      },
+      {
+        "path": "node_modules/editorconfig/lib/cli.test.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1454,
+        "delta": 1454,
+        "sha256Before": null,
+        "sha256After": "366babb0d9e9db241dc5844e7e4e813d047843f45aa0006ceaeb1d55626597bf"
+      },
+      {
+        "path": "node_modules/editorconfig/lib/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 17859,
+        "delta": 17859,
+        "sha256Before": null,
+        "sha256After": "67d7b681a68593ddef99ec61237602d9be52d188adc73274cb1e250b4a0a1487"
+      },
+      {
+        "path": "node_modules/editorconfig/lib/index.test.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 8155,
+        "delta": 8155,
+        "sha256Before": null,
+        "sha256After": "90dab95e96380d07c2adc36828263b8b88822865f13f6e92c6d8c8a2aa20017a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/balanced-match/dist/commonjs/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1779,
+        "delta": 1779,
+        "sha256Before": null,
+        "sha256After": "180549ef6f34f31e245f3060395dc453a602849558fd6657d11c28509b33347c"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/balanced-match/dist/commonjs/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 25,
+        "delta": 25,
+        "sha256Before": null,
+        "sha256After": "8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/balanced-match/dist/esm/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1608,
+        "delta": 1608,
+        "sha256Before": null,
+        "sha256After": "3070c820855fe9e6596fc2a00effd7a18882dff166d6326903e1940d6eb4082a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/balanced-match/dist/esm/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 23,
+        "delta": 23,
+        "sha256Before": null,
+        "sha256After": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/balanced-match/LICENSE.md",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1155,
+        "delta": 1155,
+        "sha256Before": null,
+        "sha256After": "d408f38ffa3355c5faec517153295338892eb0f1ea43f57874bb23c6075979b5"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/balanced-match/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1596,
+        "delta": 1596,
+        "sha256Before": null,
+        "sha256After": "c984e6ae5c41fac085a07a732b665b22e0a26f28b61c692ba18ff458a8ecc95a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/balanced-match/README.md",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1740,
+        "delta": 1740,
+        "sha256Before": null,
+        "sha256After": "68b91fa8a0b154665cf2142ed45bd1561d4a137115aaa9cd7277be93103180fc"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/brace-expansion/dist/commonjs/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 6888,
+        "delta": 6888,
+        "sha256Before": null,
+        "sha256After": "ce4f7f5bd04f5604df87f31d2c2d10b739e9d26d41270e0a8b7e65305026667b"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/brace-expansion/dist/commonjs/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 25,
+        "delta": 25,
+        "sha256Before": null,
+        "sha256After": "8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/brace-expansion/dist/esm/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 6705,
+        "delta": 6705,
+        "sha256Before": null,
+        "sha256After": "bdf2c07cb5deb74977e0f1b2e4921cc172168779f091040f150f15c76ada8a78"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/brace-expansion/dist/esm/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 23,
+        "delta": 23,
+        "sha256Before": null,
+        "sha256After": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/brace-expansion/LICENSE",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1144,
+        "delta": 1144,
+        "sha256Before": null,
+        "sha256After": "9c63a23124d68cd30cd316a94a1a0bca34f032786df6df69fc4b5f136bac8d2e"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/brace-expansion/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1559,
+        "delta": 1559,
+        "sha256Before": null,
+        "sha256After": "17bec92b5de7b1e40dca901df7ded364bfd3cd673bea97aaa215707e0b5e0703"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/brace-expansion/README.md",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 2414,
+        "delta": 2414,
+        "sha256Before": null,
+        "sha256After": "380979803c5f1019261f95732861e06b59c4b6999e9909a0776894d3e32f3121"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/commonjs/assert-valid-pattern.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 492,
+        "delta": 492,
+        "sha256Before": null,
+        "sha256After": "fcd3b0e6efee67b11249804cc64bf4d22c883395491f79bfb484869d61823600"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/commonjs/ast.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 30650,
+        "delta": 30650,
+        "sha256Before": null,
+        "sha256After": "64eef2ec09b28ba2db87a46111ad87e1e56c73b603baf6de86a12eb5b591f324"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/commonjs/brace-expressions.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 5743,
+        "delta": 5743,
+        "sha256Before": null,
+        "sha256After": "12054a62fa32362027b8103896d28d65adad412efb2a41f01af2e2e7400bbf9a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/commonjs/escape.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1253,
+        "delta": 1253,
+        "sha256Before": null,
+        "sha256After": "54b57f8f50c8e834f35a30c1848ac3f79acf8dd85894505f046afaf3965e63a0"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/commonjs/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 45140,
+        "delta": 45140,
+        "sha256Before": null,
+        "sha256After": "d224f71f20d7c206fcc5b7e9f747324c7698345a0b2c28d717dd9cf698306783"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/commonjs/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 25,
+        "delta": 25,
+        "sha256Before": null,
+        "sha256After": "8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/commonjs/unescape.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1390,
+        "delta": 1390,
+        "sha256Before": null,
+        "sha256After": "bec1bb4483a2c325599949dd6668b5b7daa2dcbe046c5a09899bc8c5b51c08c1"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/esm/assert-valid-pattern.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 336,
+        "delta": 336,
+        "sha256Before": null,
+        "sha256After": "90e8d3327d573b9d2391edf03dc7d50c1c0b468d720a4c0fb4a08a36ee5c50dc"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/esm/ast.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 30416,
+        "delta": 30416,
+        "sha256Before": null,
+        "sha256After": "ec35db8358a5a7333dbd6bdb1ea6bd3f03d1433297de7d615f24f7df5fba06b5"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/esm/brace-expressions.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 5611,
+        "delta": 5611,
+        "sha256Before": null,
+        "sha256After": "7c888d47a86b751d5e876938095c0875e837e7dd30da626ede6117c00481baeb"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/esm/escape.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1133,
+        "delta": 1133,
+        "sha256Before": null,
+        "sha256After": "8418e37c202bcd247e76b1c205d4eff9474f15fb76c1db1ef0688cb6a8ec3c94"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/esm/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 43810,
+        "delta": 43810,
+        "sha256Before": null,
+        "sha256After": "59821ec2ce0d3df968292036e5c831ad322b33e9c33a949ecbc9dfe125d165be"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/esm/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 23,
+        "delta": 23,
+        "sha256Before": null,
+        "sha256After": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/dist/esm/unescape.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1264,
+        "delta": 1264,
+        "sha256Before": null,
+        "sha256After": "2cd61ba96e616969f152445c61ec2ca129a0afd2028ea71309b862a4222304d6"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/LICENSE.md",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1550,
+        "delta": 1550,
+        "sha256Before": null,
+        "sha256After": "2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/package.json",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1810,
+        "delta": 1810,
+        "sha256Before": null,
+        "sha256After": "4b3a08a7ad20dead8bbe4b4fe97a2746bded7c51d218ef3034eb4e330ad31f08"
+      },
+      {
+        "path": "node_modules/editorconfig/node_modules/minimatch/README.md",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 19865,
+        "delta": 19865,
+        "sha256Before": null,
+        "sha256After": "d0e7683a7fcabec7f4c87b5cd55ca7b0d024cfd50b308c2ab4c9fed1aff21b8d"
+      },
+      {
+        "path": "node_modules/semver/bin/semver.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 4748,
+        "delta": 4748,
+        "sha256Before": null,
+        "sha256After": "82c28f9bc9e598d255edd507d1e9b157f37b8dac0f2da25a813b5e7121600be8"
+      },
+      {
+        "path": "node_modules/semver/classes/comparator.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 3631,
+        "delta": 3631,
+        "sha256Before": null,
+        "sha256After": "054202956430d63d5ff4599fae09760ce465b489e4f0b5ef5ce7cc7ac21157ac"
+      },
+      {
+        "path": "node_modules/semver/classes/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 143,
+        "delta": 143,
+        "sha256Before": null,
+        "sha256After": "3bb69280c2a788d0eb16f915bb9df4dbe812075182024c753dca2283bcea1b17"
+      },
+      {
+        "path": "node_modules/semver/classes/range.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 14977,
+        "delta": 14977,
+        "sha256Before": null,
+        "sha256After": "cf8f8eb6934663ae2a9d04838d4d71555427a2abd3c8748ee5219507969a6b46"
+      },
+      {
+        "path": "node_modules/semver/classes/semver.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 9480,
+        "delta": 9480,
+        "sha256Before": null,
+        "sha256After": "d5ba57e5c93f031b1d234fca4bb746746fcd1fe51be7e5ee895601e2c12e2083"
+      },
+      {
+        "path": "node_modules/semver/functions/clean.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 205,
+        "delta": 205,
+        "sha256Before": null,
+        "sha256After": "4eadb0892844cf3ae295121a86163a66c73f89acd1b7f0b114ec115b4539512f"
+      },
+      {
+        "path": "node_modules/semver/functions/cmp.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 961,
+        "delta": 961,
+        "sha256Before": null,
+        "sha256After": "a63d74e87b73788e78e9ce0a4892b5333d6b809c0de88b31e4ed76cbf17f94b3"
+      },
+      {
+        "path": "node_modules/semver/functions/coerce.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 2004,
+        "delta": 2004,
+        "sha256Before": null,
+        "sha256After": "28a251c5ab210ddf9e97551b9f37a53329fcce91f0c3943dcbc02de1a1de915a"
+      },
+      {
+        "path": "node_modules/semver/functions/compare-build.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 281,
+        "delta": 281,
+        "sha256Before": null,
+        "sha256After": "5ab651d5b40af289bd85c645a92b6d8cfe1a986dc413c797cfcc8d623d7c844c"
+      },
+      {
+        "path": "node_modules/semver/functions/compare-loose.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 132,
+        "delta": 132,
+        "sha256Before": null,
+        "sha256After": "07b6a3a1db0a5210ceb784c1708bd4679f3a94fc73a9c9eb349349e7070a6f78"
+      },
+      {
+        "path": "node_modules/semver/functions/compare.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 170,
+        "delta": 170,
+        "sha256Before": null,
+        "sha256After": "d404b5aa48aaddc8a654c5da8fb7d4443404b7948589b21ac4b045d1cee4e34c"
+      },
+      {
+        "path": "node_modules/semver/functions/diff.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1423,
+        "delta": 1423,
+        "sha256Before": null,
+        "sha256After": "7a11fd39b987cdf06c65e928cb1aca49bec583feb86fb5c8fe47a6fd61d7de31"
+      },
+      {
+        "path": "node_modules/semver/functions/eq.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 126,
+        "delta": 126,
+        "sha256Before": null,
+        "sha256After": "b6e30a7168e52723216fc163d300e2bbabf92ec0251f9ac5438bb6ccf57c8936"
+      },
+      {
+        "path": "node_modules/semver/functions/gt.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 124,
+        "delta": 124,
+        "sha256Before": null,
+        "sha256After": "135523704aa48cd98834dd170ee9f74f0e68043b379f32d021db11e6304c5c93"
+      },
+      {
+        "path": "node_modules/semver/functions/gte.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 127,
+        "delta": 127,
+        "sha256Before": null,
+        "sha256After": "991c5bbe48ecb210a562646872f05862ad9fc0d42186d85aa60bdc6fa323eb9d"
+      },
+      {
+        "path": "node_modules/semver/functions/inc.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 478,
+        "delta": 478,
+        "sha256Before": null,
+        "sha256After": "952069fc8690b7d3af0fe9d55f7c54fe2ac067b48c5e74f6a54f9ce19a334493"
+      },
+      {
+        "path": "node_modules/semver/functions/lt.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 124,
+        "delta": 124,
+        "sha256Before": null,
+        "sha256After": "1c897a9bc849320e2e9dc0f6c09555c01ee3ddf30734515d717b88ad7740ea25"
+      },
+      {
+        "path": "node_modules/semver/functions/lte.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 127,
+        "delta": 127,
+        "sha256Before": null,
+        "sha256After": "3a8d0b1d00423f60cc7cb810b36ab77b61330831ad237dbe73eb5cecfa412800"
+      },
+      {
+        "path": "node_modules/semver/functions/major.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 136,
+        "delta": 136,
+        "sha256Before": null,
+        "sha256After": "5c678480d882f511200fed2c16ec3847dfedb08a1d70328dc2f031d35d825276"
+      },
+      {
+        "path": "node_modules/semver/functions/minor.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 136,
+        "delta": 136,
+        "sha256Before": null,
+        "sha256After": "1b051794f1713adec2a236517196691687c35f82e0b596ff3316a78b3cc10ae6"
+      },
+      {
+        "path": "node_modules/semver/functions/neq.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 128,
+        "delta": 128,
+        "sha256Before": null,
+        "sha256After": "a662883751918822c162183b46b9e20d09489132f82686c92ab78bee67f3a127"
+      },
+      {
+        "path": "node_modules/semver/functions/parse.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 331,
+        "delta": 331,
+        "sha256Before": null,
+        "sha256After": "29a69e15b6d02fe381d573f861881a89590e9d0f0f0ca740c5f85eaf0234c4ad"
+      },
+      {
+        "path": "node_modules/semver/functions/patch.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 136,
+        "delta": 136,
+        "sha256Before": null,
+        "sha256After": "f02d3c1b059fe3d96ce124886f7eef321d381a95638fd3c4a8d5ccd8e76ffadd"
+      },
+      {
+        "path": "node_modules/semver/functions/prerelease.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 234,
+        "delta": 234,
+        "sha256Before": null,
+        "sha256After": "baedbf503d5610ad041bfb56071efa48feb331ca278295c399537d35d3ffb593"
+      },
+      {
+        "path": "node_modules/semver/functions/rcompare.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 132,
+        "delta": 132,
+        "sha256Before": null,
+        "sha256After": "84fa5e88adf08d15c993cac8cdec6d1a65045b7e95a9c55184230a7f807f4dc0"
+      },
+      {
+        "path": "node_modules/semver/functions/rsort.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 163,
+        "delta": 163,
+        "sha256Before": null,
+        "sha256After": "6ec659ce3b6c2b173c719286caab04409adba046c0917874ec3b5e36ddfbc7e3"
+      },
+      {
+        "path": "node_modules/semver/functions/satisfies.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 247,
+        "delta": 247,
+        "sha256Before": null,
+        "sha256After": "8cf5e122b757251671ed6c9d9680904b71cd375845853f05312e608cf2cc2946"
+      },
+      {
+        "path": "node_modules/semver/functions/sort.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 161,
+        "delta": 161,
+        "sha256Before": null,
+        "sha256After": "c2fe2d3ed0be8a4e9de8f02abdfd5d9c0d3bcc510d88e87af84185592882c4b8"
+      },
+      {
+        "path": "node_modules/semver/functions/valid.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 176,
+        "delta": 176,
+        "sha256Before": null,
+        "sha256After": "0de7ea736cb7807179d46dfac09c830a9338e02b6a07db12d7040cde2def6025"
+      },
+      {
+        "path": "node_modules/semver/index.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 2630,
+        "delta": 2630,
+        "sha256Before": null,
+        "sha256After": "646e0b707f56dca7cb90cebc6fe687278bcc1a16fdcc83756dbe23083ff15e06"
+      },
+      {
+        "path": "node_modules/semver/internal/constants.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 873,
+        "delta": 873,
+        "sha256Before": null,
+        "sha256After": "38a112baf27ceca0260082ff26ac2fd7a9861cab1af12dd65e720277f68e6ce9"
+      },
+      {
+        "path": "node_modules/semver/internal/debug.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 240,
+        "delta": 240,
+        "sha256Before": null,
+        "sha256After": "8a9f420572260f3cf944463b5090d62a60f0730589dc23a7ec4ca25e2ee41bb3"
+      },
+      {
+        "path": "node_modules/semver/internal/identifiers.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 525,
+        "delta": 525,
+        "sha256Before": null,
+        "sha256After": "b4916b09dc7869ae0eb05e71c855c942a3a7365f7e6e89185d59a9e45a2451d7"
+      },
+      {
+        "path": "node_modules/semver/internal/lrucache.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 802,
+        "delta": 802,
+        "sha256Before": null,
+        "sha256After": "14d087c87da87b6f5c36fc4cdd7d2d14077874b14a68e20fce5b6138fa2ca34f"
+      },
+      {
+        "path": "node_modules/semver/internal/parse-options.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 338,
+        "delta": 338,
+        "sha256Before": null,
+        "sha256After": "fdf51d0de8d5442c35a997ef58cd530d239ce206f961d14c5121354451b01d01"
+      },
+      {
+        "path": "node_modules/semver/internal/re.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 8138,
+        "delta": 8138,
+        "sha256Before": null,
+        "sha256After": "6a47e73c279fa8c4011f670471f50830a39922b43797b2884e6cc03f65b64d6c"
+      },
+      {
+        "path": "node_modules/semver/preload.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 83,
+        "delta": 83,
+        "sha256Before": null,
+        "sha256After": "edb6808911bebcb324b2df57e5c9935149e56984ff083b74c6cfe215f5b710ba"
+      },
+      {
+        "path": "node_modules/semver/ranges/gtr.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 231,
+        "delta": 231,
+        "sha256Before": null,
+        "sha256After": "8fadad28e36d28e93d498ac7ac20badba2a407312845eabc18e82e90a0732b19"
+      },
+      {
+        "path": "node_modules/semver/ranges/intersects.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 224,
+        "delta": 224,
+        "sha256Before": null,
+        "sha256After": "fe87ac5d3020010ad3ec00636dadbf0c669ff07d0f57e0a8165a8264f79a676f"
+      },
+      {
+        "path": "node_modules/semver/ranges/ltr.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 227,
+        "delta": 227,
+        "sha256Before": null,
+        "sha256After": "e5186fcc03018acf9be6d968755d4c49727aeb0d981d179eb568ae5fbe983038"
+      },
+      {
+        "path": "node_modules/semver/ranges/max-satisfying.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 593,
+        "delta": 593,
+        "sha256Before": null,
+        "sha256After": "e1a2c0d6144cc772cd20bbc8ecb9e8a3a4074e9172a3d8e794838b591cdeb416"
+      },
+      {
+        "path": "node_modules/semver/ranges/min-satisfying.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 591,
+        "delta": 591,
+        "sha256Before": null,
+        "sha256After": "2681abf54098aa670f12826b76a6ec77a2441186ae4243afde3be8ae4908f7ca"
+      },
+      {
+        "path": "node_modules/semver/ranges/min-version.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1514,
+        "delta": 1514,
+        "sha256Before": null,
+        "sha256After": "fefba0a88c2bf74d5cede504b5ae50a8dc3edfd69cf0174a491e2cf3e442614b"
+      },
+      {
+        "path": "node_modules/semver/ranges/outside.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 2204,
+        "delta": 2204,
+        "sha256Before": null,
+        "sha256After": "3a2b0b23593d2f49419c06af2af75450cab103b0c25d665d48fe5bca495a21ca"
+      },
+      {
+        "path": "node_modules/semver/ranges/simplify.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 1355,
+        "delta": 1355,
+        "sha256Before": null,
+        "sha256After": "7b78581c13322bc68ece2088685386b2a9b51c15b94d0a2063bdf2546bd41934"
+      },
+      {
+        "path": "node_modules/semver/ranges/subset.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 7524,
+        "delta": 7524,
+        "sha256Before": null,
+        "sha256After": "87387952fbe154f5874d5f09dd2173e782e894a76fa8370ce23f4120e2ae7eae"
+      },
+      {
+        "path": "node_modules/semver/ranges/to-comparators.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 282,
+        "delta": 282,
+        "sha256Before": null,
+        "sha256After": "6c5e966210cff270fa2850668aaf8460fac7759f8d99f282521ef7a78f4564e9"
+      },
+      {
+        "path": "node_modules/semver/ranges/valid.js",
+        "kind": "added",
+        "sizeBefore": null,
+        "sizeAfter": 326,
+        "delta": 326,
+        "sha256Before": null,
+        "sha256After": "5ef6f995af801868925940cf8df5735d565ebabb090b068695cae65218bcd3ac"
+      },
+      {
+        "path": "CHANGELOG.md",
+        "kind": "modified",
+        "sizeBefore": 7751,
+        "sizeAfter": 8992,
+        "delta": 1241,
+        "sha256Before": "a28926e4ec17bfa905d65b36ecf67343addbc609fc75df0175d49e9e3924fa0a",
+        "sha256After": "02710b096e8cb480e2deac3a19f57b9218a9cfa79a3bcd60408b514ab2be8239"
+      },
+      {
+        "path": "node_modules/commander/index.js",
+        "kind": "modified",
+        "sizeBefore": 27883,
+        "sizeAfter": 812,
+        "delta": -27071,
+        "sha256Before": "e60981d46b7cc03e299353b039cd67dacf3e9f535cf1e5e0e8029ad786c21c0b",
+        "sha256After": "a1bb4f6511f3801f961ab3efe5b735e6f248dd52c3937b260fc6c0d85d1896b3"
+      },
+      {
+        "path": "node_modules/commander/package.json",
+        "kind": "modified",
+        "sizeBefore": 1767,
+        "sizeAfter": 2097,
+        "delta": 330,
+        "sha256Before": "7b2560b0d4e56f4fb048d1f823455f7051f16d01e926dfb522cac81f689581fa",
+        "sha256After": "abcadf3d5575510b0ebcc9c04d39a838b01a5932861cf2454beb985eae4b4ea3"
+      },
+      {
+        "path": "node_modules/commander/Readme.md",
+        "kind": "modified",
+        "sizeBefore": 12783,
+        "sizeAfter": 43369,
+        "delta": 30586,
+        "sha256Before": "29672cd1edd16b578263d874e1933bd7248bbe67d991cc366f73ba66d7a349b9",
+        "sha256After": "562e032d925cb72593662eddf42e11c87f9233637dc348d9fd18abec6fb55248"
+      },
+      {
+        "path": "node_modules/editorconfig/bin/editorconfig",
+        "kind": "modified",
+        "sizeBefore": 78,
+        "sizeAfter": 131,
+        "delta": 53,
+        "sha256Before": "e8042c875a57437f6c13a23ee5d3f96b05a7ee3e4beee0861a39e0123e2871ac",
+        "sha256After": "00b962e909f6485bfedacb9e599376dcf06bffd3257643eb861a4df005dbe5bb"
+      },
+      {
+        "path": "node_modules/editorconfig/package.json",
+        "kind": "modified",
+        "sizeBefore": 2781,
+        "sizeAfter": 1019,
+        "delta": -1762,
+        "sha256Before": "d02509de1a104b9b57c74b763fce253a7779a80b4ad9e598f960b7142fde68b8",
+        "sha256After": "24976f0205a118a419891f75f25250fdb6b1bf0b364b546cdf009d62d89aeb1a"
+      },
+      {
+        "path": "node_modules/editorconfig/README.md",
+        "kind": "modified",
+        "sizeBefore": 4486,
+        "sizeAfter": 7246,
+        "delta": 2760,
+        "sha256Before": "136253ac6668ebd1c6ce10fb673b18ed67ae413d0dfceed569c923c9ece259f7",
+        "sha256After": "8413dd13ab0eca5978301d3e5baeb74ae33f981ca975dae95e6b92c5f553090c"
+      },
+      {
+        "path": "node_modules/semver/package.json",
+        "kind": "modified",
+        "sizeBefore": 1451,
+        "sizeAfter": 1663,
+        "delta": 212,
+        "sha256Before": "18fb47ff3e9300dc1e6a3729efd3976faf6dd2b4237535a84601d3bcecc9e638",
+        "sha256After": "ba0d1b548512e65c15b1cddbcd6caa16cc9070e8af8987d02ba929a1f06c0177"
+      },
+      {
+        "path": "node_modules/semver/README.md",
+        "kind": "modified",
+        "sizeBefore": 15719,
+        "sizeAfter": 24811,
+        "delta": 9092,
+        "sha256Before": "b42ad59a3bd85f7f83dc93fd0c155cb1bcb872714774a31f7133409c00d2e464",
+        "sha256After": "5d2d39fa26b5d8a0c49de7543a68a5deba374858f5286aa83b5a80879e0cd7a5"
+      },
+      {
+        "path": "out/api.js",
+        "kind": "modified",
+        "sizeBefore": 5138,
+        "sizeAfter": 5458,
+        "delta": 320,
+        "sha256Before": "79eb62c8344b5202c7c81e9d07b5c6351bd0ec7552ae78ac9f861f4173a6a256",
+        "sha256After": "0a93d425d8499e2dcc08a12dbf394731af7d7060c1d9b11708f7d37c2f4b8bf9"
+      },
+      {
+        "path": "out/commands/generateEditorConfig.js",
+        "kind": "modified",
+        "sizeBefore": 4422,
+        "sizeAfter": 5177,
+        "delta": 755,
+        "sha256Before": "ea6b7fb0cc750896f5cdea256d6edb46ba829ac07021d237afd861117da89e76",
+        "sha256After": "2350ae9c07da9e898c080bc2047afead14aabe5f4d105828a34d7956b909d6cf"
+      },
+      {
+        "path": "out/DocumentWatcher.js",
+        "kind": "modified",
+        "sizeBefore": 4903,
+        "sizeAfter": 5831,
+        "delta": 928,
+        "sha256Before": "ce8d5b3f9ee590d55d13d719f18947254a82e42cea792254ed4074d51230c253",
+        "sha256After": "fb7f26df6a0f71d530eabc4d1968ea1929cd5c350ece6445f95f6fed521d0ced"
+      },
+      {
+        "path": "out/EditorConfigCompletionProvider.js",
+        "kind": "modified",
+        "sizeBefore": 7167,
+        "sizeAfter": 7173,
+        "delta": 6,
+        "sha256Before": "16d653b1031cc5be7b10f22534f07343851d03493692641fae0738a64e812a4f",
+        "sha256After": "86bc7f6de7e885a4046c6a1284647de9edc0d9b3a145c23ca9613dc3b3489992"
+      },
+      {
+        "path": "out/editorConfigMain.js",
+        "kind": "modified",
+        "sizeBefore": 1707,
+        "sizeAfter": 1680,
+        "delta": -27,
+        "sha256Before": "4c56af7b17538152790c3d7f1a21b1988eaf9ed6e21667d4779422ea6aaad4c1",
+        "sha256After": "abc499dbc9c8279e979cade2804acb681d093ea292a199b7296a0b57820a946f"
+      },
+      {
+        "path": "out/transformations/index.js",
+        "kind": "modified",
+        "sizeBefore": 847,
+        "sizeAfter": 1015,
+        "delta": 168,
+        "sha256Before": "e1765f613fb58b76d494a9e1f7114f92e1fe8984ac273a5137fbba32f679c6b4",
+        "sha256After": "d0a93bd1bfcd0e1506075a8b1ed4f3b3b79517fdc8e4d04e3bcadeba08f7c217"
+      },
+      {
+        "path": "out/transformations/InsertFinalNewline.js",
+        "kind": "modified",
+        "sizeBefore": 1423,
+        "sizeAfter": 1757,
+        "delta": 334,
+        "sha256Before": "5aba6439b729acf6ffd9007c0c5bd1f9699215f7a5ca2a139102ec2156ca6261",
+        "sha256After": "085748ede6ab3e76411f43db82e7b96616afe25e082bf2c20ef0b43a10e7779c"
+      },
+      {
+        "path": "out/transformations/TrimTrailingWhitespace.js",
+        "kind": "modified",
+        "sizeBefore": 2738,
+        "sizeAfter": 2767,
+        "delta": 29,
+        "sha256Before": "081db7b0f1761c9a86d9b67ca61712fac463d745da53b7ea73259e3e9bcce67b",
+        "sha256After": "d76ec4b4aacfbbcae60e71b085b156e65fbcdfeb006e37638090fc7ab081a339"
+      },
+      {
+        "path": "package.json",
+        "kind": "modified",
+        "sizeBefore": 4511,
+        "sizeAfter": 4512,
+        "delta": 1,
+        "sha256Before": "437e61ec2203564713c1fc7d037475e5877414c139eb844f4419748f59085582",
+        "sha256After": "e3974cacb8551691df2ec8b90051e1c414c93e18c10b31d479af00367254f3eb"
+      },
+      {
+        "path": "README.md",
+        "kind": "modified",
+        "sizeBefore": 3089,
+        "sizeAfter": 3015,
+        "delta": -74,
+        "sha256Before": "a29fae5ae1859b3db6400d7d7648fb36421a8bddaaccd8f762e362f021437f83",
+        "sha256After": "919d6866e5b9935ebe07776905c580d4a8f20b7840294e1e451e00d32f7bcb1b"
+      },
+      {
+        "path": "syntaxes/editorconfig.tmLanguage.json",
+        "kind": "modified",
+        "sizeBefore": 9827,
+        "sizeAfter": 9829,
+        "delta": 2,
+        "sha256Before": "2bf9ef32c05d758ed9b45527b9abc7e8c2b14bc1dc3772f543dc54ad0f09092b",
+        "sha256After": "7516e73e960785e5aa7da2d93ddee9e2d86d857bcf3e68802e648794addb6b8a"
+      },
+      {
+        "path": "node_modules/commander/CHANGELOG.md",
+        "kind": "removed",
+        "sizeBefore": 11086,
+        "sizeAfter": null,
+        "delta": -11086,
+        "sha256Before": "2c5f85f0d39d5415ee44391fd3fbbfddf4247a41bef7c52f925be838f477bd3e",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/editorconfig/CHANGELOG.md",
+        "kind": "removed",
+        "sizeBefore": 315,
+        "sizeAfter": null,
+        "delta": -315,
+        "sha256Before": "622214da46ae168f90962e309679fee729c58c9bd54d8ec9ef048ec3ebd624d3",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/editorconfig/src/cli.js",
+        "kind": "removed",
+        "sizeBefore": 2204,
+        "sizeAfter": null,
+        "delta": -2204,
+        "sha256Before": "acad0943a68602ddc01bf30ecd38dc05b8fcf682bef22ad4fa3f43b44eaec0de",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/editorconfig/src/index.js",
+        "kind": "removed",
+        "sizeBefore": 10816,
+        "sizeAfter": null,
+        "delta": -10816,
+        "sha256Before": "2627eda131ad398b48ad9f60067808f67e3a461d87a9d943ceb4adae93e9ea1f",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/editorconfig/src/lib/fnmatch.js",
+        "kind": "removed",
+        "sizeBefore": 30407,
+        "sizeAfter": null,
+        "delta": -30407,
+        "sha256Before": "ed0e2bffad3d88d7626caeac93c2f9e24ac654271cf50869ff7d325f4352580c",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/editorconfig/src/lib/ini.js",
+        "kind": "removed",
+        "sizeBefore": 4717,
+        "sizeAfter": null,
+        "delta": -4717,
+        "sha256Before": "e4336d4032df67349fc6fd48711ca72e0d1393a2c5383c6fc53d1c12ee91b5e7",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/lru-cache/index.js",
+        "kind": "removed",
+        "sizeBefore": 10689,
+        "sizeAfter": null,
+        "delta": -10689,
+        "sha256Before": "86675979bd2b3b34a3c453eb71b1d53227dd71f51ebb519e6f7f23f7b007bdfa",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/lru-cache/LICENSE",
+        "kind": "removed",
+        "sizeBefore": 765,
+        "sizeAfter": null,
+        "delta": -765,
+        "sha256Before": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/lru-cache/package.json",
+        "kind": "removed",
+        "sizeBefore": 1880,
+        "sizeAfter": null,
+        "delta": -1880,
+        "sha256Before": "f2a5a358d93621c0dfc2bb17608227a5b05b58993ecf1df0d9a4e6ac6bbbafa3",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/lru-cache/README.md",
+        "kind": "removed",
+        "sizeBefore": 5447,
+        "sizeAfter": null,
+        "delta": -5447,
+        "sha256Before": "34013e41e78e89844a3fb45c0440cf4dd7f998942619b5553beaa8d17cc15620",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/pseudomap/LICENSE",
+        "kind": "removed",
+        "sizeBefore": 765,
+        "sizeAfter": null,
+        "delta": -765,
+        "sha256Before": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/pseudomap/map.js",
+        "kind": "removed",
+        "sizeBefore": 280,
+        "sizeAfter": null,
+        "delta": -280,
+        "sha256Before": "c5a736d310d63027b396ac5af743b45b2128fc1207a2cd346dee83a2f892f7a5",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/pseudomap/package.json",
+        "kind": "removed",
+        "sizeBefore": 1389,
+        "sizeAfter": null,
+        "delta": -1389,
+        "sha256Before": "eb5e438d587bfe896370e98ad02d040d8d6012f948498f6fc62c4a80c1918714",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/pseudomap/pseudomap.js",
+        "kind": "removed",
+        "sizeBefore": 2437,
+        "sizeAfter": null,
+        "delta": -2437,
+        "sha256Before": "4d4094f8f06fdc7383d0ecaebcacb9248bdffffd96c5091d2250be123c083a62",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/pseudomap/README.md",
+        "kind": "removed",
+        "sizeBefore": 2163,
+        "sizeAfter": null,
+        "delta": -2163,
+        "sha256Before": "abf5a97cea95084572bc01fbd29bcc2be89b52d9ac50d1b336c3c7892e651be9",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/pseudomap/test/basic.js",
+        "kind": "removed",
+        "sizeBefore": 1884,
+        "sizeAfter": null,
+        "delta": -1884,
+        "sha256Before": "f7aeac11062e9bc6512ca258f3bf6031c614cf06671b41e937e345bf68930345",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/semver/bin/semver",
+        "kind": "removed",
+        "sizeBefore": 4418,
+        "sizeAfter": null,
+        "delta": -4418,
+        "sha256Before": "03f83d135afd4855683ff95d708f671593af782471daf4794ba9079178aa1b03",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/semver/CHANGELOG.md",
+        "kind": "removed",
+        "sizeBefore": 672,
+        "sizeAfter": null,
+        "delta": -672,
+        "sha256Before": "33dadafd51d9364d07325b4ccf8ee51c986d4fbfabb5c193895070536420138b",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/semver/semver.js",
+        "kind": "removed",
+        "sizeBefore": 38803,
+        "sizeAfter": null,
+        "delta": -38803,
+        "sha256Before": "161e134793e0789620e9c3257ea47b28049b977f08e817dcfa9e2e30cca8bdf4",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/sigmund/bench.js",
+        "kind": "removed",
+        "sizeBefore": 6918,
+        "sizeAfter": null,
+        "delta": -6918,
+        "sha256Before": "3ac2d02f99047d65316f175b5dda4bdcd54b702327e98dc8aae74a8566b2d7cb",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/sigmund/LICENSE",
+        "kind": "removed",
+        "sizeBefore": 765,
+        "sizeAfter": null,
+        "delta": -765,
+        "sha256Before": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/sigmund/package.json",
+        "kind": "removed",
+        "sizeBefore": 1415,
+        "sizeAfter": null,
+        "delta": -1415,
+        "sha256Before": "f892b1a1441dac2eb52a43fc1fcfed612f83ec33b029eac1059c465e720af8d8",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/sigmund/README.md",
+        "kind": "removed",
+        "sizeBefore": 1854,
+        "sizeAfter": null,
+        "delta": -1854,
+        "sha256Before": "8aa68dea51186a77afa93ca210b121b2f33ad89625d887261b976a058b011579",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/sigmund/sigmund.js",
+        "kind": "removed",
+        "sizeBefore": 1146,
+        "sizeAfter": null,
+        "delta": -1146,
+        "sha256Before": "c46891fe81f7d99ea242471397c6a21650b670cf2d5847c4c65f36139067ec5a",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/sigmund/test/basic.js",
+        "kind": "removed",
+        "sizeBefore": 684,
+        "sizeAfter": null,
+        "delta": -684,
+        "sha256Before": "e55152eacc1f1ba76d6ac14a824535ea68851771466751ac80ff8b3f79077adf",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/yallist/iterator.js",
+        "kind": "removed",
+        "sizeBefore": 183,
+        "sizeAfter": null,
+        "delta": -183,
+        "sha256Before": "c8c3b45ee2bd74d2095f7d64fae387af1e06260793fc28b98dbeb5a405f7301f",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/yallist/LICENSE",
+        "kind": "removed",
+        "sizeBefore": 765,
+        "sizeAfter": null,
+        "delta": -765,
+        "sha256Before": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/yallist/package.json",
+        "kind": "removed",
+        "sizeBefore": 1469,
+        "sizeAfter": null,
+        "delta": -1469,
+        "sha256Before": "eb66b452cebb32206144fca550f4f5c37863e12db36614d743c87ff3be3e4803",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/yallist/README.md",
+        "kind": "removed",
+        "sizeBefore": 4717,
+        "sizeAfter": null,
+        "delta": -4717,
+        "sha256Before": "cf293896dc0c704e9ed655ebb43341cc1ac5d0b2214f78377bed4370b7c6dd0f",
+        "sha256After": null
+      },
+      {
+        "path": "node_modules/yallist/yallist.js",
+        "kind": "removed",
+        "sizeBefore": 7280,
+        "sizeAfter": null,
+        "delta": -7280,
+        "sha256Before": "f605b18fb129e502dcf50cbead77c862fa923f9f89eb33c2aa44e1809c97c466",
+        "sha256After": null
+      }
+    ]
+  },
+  "suspicious": [],
+  "notes": []
+}

@@ -1,0 +1,54 @@
+{
+  "name": "vsx-diff",
+  "version": "0.1.0",
+  "description": "Diff VS Code, Cursor, and VSCodium extension updates and flag supply-chain risk before you install them.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "vsx-diff": "./bin/vsx-diff.js"
+  },
+  "main": "./dist/cli.js",
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "demo": "npm run build && node demo/run-demo.mjs",
+    "generate:fixtures": "npm run build && node demo/generate-fixtures.mjs",
+    "vsx-diff": "node bin/vsx-diff.js"
+  },
+  "keywords": [
+    "vscode",
+    "openvsx",
+    "vsix",
+    "supply-chain",
+    "security",
+    "cursor",
+    "vscodium"
+  ],
+  "dependencies": {
+    "commander": "^14.0.2",
+    "fflate": "^0.8.2",
+    "picocolors": "^1.1.1",
+    "semver": "^7.7.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^22.19.1",
+    "@types/semver": "^7.7.1",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3",
+    "vitest": "^3.2.4"
+  }
+}

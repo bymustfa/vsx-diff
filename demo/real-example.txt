@@ -1,0 +1,95 @@
+vsx-diff  EditorConfig.EditorConfig
+0.16.6 (openvsx)  →  0.18.2 (openvsx)
+demo/.cache/EditorConfig.EditorConfig/0.16.6-openvsx.vsix  →  demo/.cache/EditorConfig.EditorConfig/0.18.2-openvsx.vsix
+published 2021-08-23T03:21:59.146068Z  →  2026-04-09T04:09:42.629870Z
+
+Risk  MEDIUM  score 59
+  + 30  medium  untrustedWorkspaces.supported is now true, so the extension may run in untrusted workspaces.
+  +  5  low     contributes changed: contribution contents changed.
+  +  4  low     devDependencies added: @vscode/test-electron@^2.5.2
+  +  4  low     devDependencies added: @vscode/vsce@^3.5.0
+  +  2  low     dependencies bumped: editorconfig@^3.0.2
+  +  1  low     devDependencies removed: @types/glob
+  +  1  low     devDependencies bumped: @types/mocha@^10.0.10
+  +  1  low     devDependencies bumped: @types/node@^20.19.0
+  +  1  low     devDependencies bumped: @types/vscode@~1.100.0
+  +  1  low     devDependencies bumped: @typescript-eslint/eslint-plugin@^8.34.0
+  +  1  low     devDependencies bumped: @typescript-eslint/parser@^8.34.0
+  +  1  low     devDependencies bumped: eslint@^8.57.1
+  +  1  low     devDependencies bumped: eslint-config-prettier@^10.1.5
+  +  1  low     devDependencies bumped: eslint-config-xo@^0.45.0
+  +  1  low     devDependencies bumped: eslint-plugin-prettier@^5.4.1
+  +  1  low     devDependencies bumped: glob@^11.0.2
+  +  1  low     devDependencies removed: husky
+  +  1  low     devDependencies removed: lint-staged
+  +  1  low     devDependencies bumped: mocha@^11.6.0
+
+Manifest
+  version                  0.16.6 → 0.18.2
+  displayName              EditorConfig for VS Code → EditorConfig
+  engines.vscode           ^1.51.1 → ^1.100.0
+  capabilities             untrustedWorkspaces.supported unset → true
+  contributes              contribution contents changed
+
+Lifecycle scripts
+  -  prewatch  npm run build
+
+Dependencies
+  ~  dependencies  editorconfig@^0.15 → ^3.0.2
+  -  devDependencies  @types/glob@^7
+  ~  devDependencies  @types/mocha@^8 → ^10.0.10
+  ~  devDependencies  @types/node@^14 → ^20.19.0
+  ~  devDependencies  @types/vscode@^1 → ~1.100.0
+  ~  devDependencies  @typescript-eslint/eslint-plugin@^4 → ^8.34.0
+  ~  devDependencies  @typescript-eslint/parser@^4 → ^8.34.0
+  +  devDependencies  @vscode/test-electron@^2.5.2
+  +  devDependencies  @vscode/vsce@^3.5.0
+  ~  devDependencies  eslint@^7 → ^8.57.1
+  ~  devDependencies  eslint-config-prettier@^6 → ^10.1.5
+  ~  devDependencies  eslint-config-xo@^0.33 → ^0.45.0
+  ~  devDependencies  eslint-plugin-prettier@^3 → ^5.4.1
+  ~  devDependencies  glob@^7 → ^11.0.2
+  -  devDependencies  husky@^4
+  -  devDependencies  lint-staged@^10
+  ~  devDependencies  mocha@^8 → ^11.6.0
+  ~  devDependencies  prettier@^2 → ^3.5.3
+  ~  devDependencies  rimraf@^3 → ^6.0.1
+  ~  devDependencies  typescript@^4 → ~5.8.3
+  -  devDependencies  vscode-test@^1
+  ~  devDependencies  vscode-test-utils@^1 → ^1.0.0
+
+Files  +98  ~20  -30  11 unchanged
+  +  DEVELOPER.md  728 B
+  +  node_modules/@one-ini/wasm/LICENSE  1.0 KB
+  +  node_modules/@one-ini/wasm/one_ini_bg.wasm  87.1 KB
+  +  node_modules/@one-ini/wasm/one_ini.js  9.1 KB
+  +  node_modules/@one-ini/wasm/package.json  600 B
+  +  node_modules/@one-ini/wasm/README.md  2.0 KB
+  +  node_modules/commander/esm.mjs  310 B
+  +  node_modules/commander/lib/argument.js  3.1 KB
+  +  node_modules/commander/lib/command.js  85.2 KB
+  +  node_modules/commander/lib/error.js  1.1 KB
+  +  node_modules/commander/lib/help.js  20.6 KB
+  +  node_modules/commander/lib/option.js  10.0 KB
+  +  node_modules/commander/lib/suggestSimilar.js  2.7 KB
+  +  node_modules/commander/package-support.json  337 B
+  +  node_modules/commander/typings/esm.d.mts  168 B
+  +  node_modules/editorconfig/lib/cli.js  4.6 KB
+  +  node_modules/editorconfig/lib/cli.test.js  1.4 KB
+  +  node_modules/editorconfig/lib/index.js  17.4 KB
+  +  node_modules/editorconfig/lib/index.test.js  8.0 KB
+  +  node_modules/editorconfig/node_modules/balanced-match/dist/commonjs/index.js  1.7 KB
+  +  node_modules/editorconfig/node_modules/balanced-match/dist/commonjs/package.json  25 B
+  +  node_modules/editorconfig/node_modules/balanced-match/dist/esm/index.js  1.6 KB
+  +  node_modules/editorconfig/node_modules/balanced-match/dist/esm/package.json  23 B
+  +  node_modules/editorconfig/node_modules/balanced-match/LICENSE.md  1.1 KB
+  +  node_modules/editorconfig/node_modules/balanced-match/package.json  1.6 KB
+  +  node_modules/editorconfig/node_modules/balanced-match/README.md  1.7 KB
+  +  node_modules/editorconfig/node_modules/brace-expansion/dist/commonjs/index.js  6.7 KB
+  +  node_modules/editorconfig/node_modules/brace-expansion/dist/commonjs/package.json  25 B
+  +  node_modules/editorconfig/node_modules/brace-expansion/dist/esm/index.js  6.5 KB
+  +  node_modules/editorconfig/node_modules/brace-expansion/dist/esm/package.json  23 B
+  … 118 more (see --json)
+
+Suspicious
+  none
