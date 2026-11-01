@@ -32,15 +32,30 @@ Two public incidents from October 2026 are the reason this tool exists.
 
 ## Install
 
-Requires Node.js 20+.
+Requires Node.js 20+. The package is on npm: [vsx-diff](https://www.npmjs.com/package/vsx-diff), published with provenance.
+
+Run it without installing:
+
+```bash
+npx vsx-diff --help
+```
+
+Or install it globally:
+
+```bash
+npm i -g vsx-diff
+vsx-diff --help
+```
+
+### From source
+
+From a git checkout, build first, then run the built CLI:
 
 ```bash
 npm install
 npm run build
-npx vsx-diff --help
+node bin/vsx-diff.js --help
 ```
-
-`npx vsx-diff` resolves this package's `bin` once the package is installed (locally via `npm install` in a project that depends on it, or globally). From a git checkout, `npm run build` then `npx vsx-diff` or `node bin/vsx-diff.js` both work after the build.
 
 ## Quickstart
 

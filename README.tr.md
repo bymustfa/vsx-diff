@@ -32,15 +32,30 @@ Bu araç, Ekim 2026’daki iki kamuoyuna açık olay yüzünden var.
 
 ## Kurulum
 
-Node.js 20 veya daha yenisi gerekir.
+Node.js 20 veya daha yenisi gerekir. Paket npm'de: [vsx-diff](https://www.npmjs.com/package/vsx-diff). Provenance ile yayımlanır.
+
+Kurmadan çalıştırmak için:
+
+```bash
+npx vsx-diff --help
+```
+
+Ya da genel olarak kurun:
+
+```bash
+npm i -g vsx-diff
+vsx-diff --help
+```
+
+### Kaynaktan
+
+Bir git kopyasında önce derleyin, sonra derlenmiş CLI'ı çalıştırın:
 
 ```bash
 npm install
 npm run build
-npx vsx-diff --help
+node bin/vsx-diff.js --help
 ```
-
-`npx vsx-diff`, paket kurulduktan sonra bu paketin `bin` girişini bulur (ona bağımlı bir projede `npm install` ile ya da genel kurulumla). Bir git kopyasından `npm run build` sonrasında hem `npx vsx-diff` hem `node bin/vsx-diff.js` çalışır.
 
 ## Hızlı başlangıç
 
