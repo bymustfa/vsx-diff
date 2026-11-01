@@ -1,3 +1,7 @@
+English | [Türkçe](README.tr.md)
+
+[![CI](https://github.com/bymustfa/vsx-diff/actions/workflows/ci.yml/badge.svg)](https://github.com/bymustfa/vsx-diff/actions/workflows/ci.yml)
+
 # vsx-diff
 
 `vsx-diff` shows what actually changed between two versions of a VS Code, Cursor, or VSCodium extension, scores the risky parts, and lets you pin a known version, roll back, or refuse an update until it is old enough.
@@ -281,7 +285,7 @@ npm run typecheck
 npm run build
 ```
 
-GitHub Actions runs lint, typecheck, test, build, and the offline demo on Ubuntu with Node.js 22.
+GitHub Actions runs lint, typecheck, test, build, and the offline demo on Ubuntu with Node.js 20 and 22. The status checks are `ci (20)` and `ci (22)`.
 
 ## Roadmap
 

@@ -4,6 +4,15 @@
   "description": "Diff VS Code, Cursor, and VSCodium extension updates and flag supply-chain risk before you install them.",
   "type": "module",
   "license": "MIT",
+  "author": "Mustafa Öztürk",
+  "homepage": "https://github.com/bymustfa/vsx-diff#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bymustfa/vsx-diff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bymustfa/vsx-diff/issues"
+  },
   "bin": {
     "vsx-diff": "./bin/vsx-diff.js"
   },
@@ -12,6 +21,7 @@
     "dist",
     "bin",
     "README.md",
+    "README.tr.md",
     "LICENSE",
     "CHANGELOG.md"
   ],

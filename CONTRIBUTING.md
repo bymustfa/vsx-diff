@@ -10,7 +10,9 @@ npm run build
 npm test
 ```
 
-Node.js 20 or newer is required.
+Node.js 20 or newer is required. CI runs the same checks on Node.js 20 and 22.
+
+This project follows the [Contributor Covenant](CODE_OF_CONDUCT.md). Report security issues privately, as described in [SECURITY.md](SECURITY.md).
 
 ## Layout
 

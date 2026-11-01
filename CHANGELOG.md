@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Turkish README, community files, and CI on Node.js 20 and 22.
+
 ## 0.1.0 — 2026-11-01
 
 First public release of `vsx-diff`.
